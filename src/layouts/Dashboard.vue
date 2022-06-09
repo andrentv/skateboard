@@ -1,0 +1,38 @@
+<template>
+  <div class="bg-gray-800 flex text-white max-h-screen h-screen">
+    <div class="border w-64">
+      <span class="font-semibold p-6 block opacity-90">Skateboard</span>
+
+      <nav class="p-6">
+        <h3 class="opacity-50 uppercase font-semibold tracking-wider mb-6 text-xs">Menu</h3>
+        <div class="space-y-6">
+          <MenuItem :icon="HomeIcon">Discover</MenuItem>
+          <MenuItem :icon="HomeIcon">Discover</MenuItem>
+          <MenuItem :icon="TrendingUpIcon">Trending</MenuItem>
+          <MenuItem :icon="TrendingUpIcon">Trending</MenuItem>
+          <MenuItem :icon="TrendingUpIcon">Trending</MenuItem>
+          <MenuItem :icon="TrendingUpIcon">Trending</MenuItem>
+        </div>
+      </nav>
+    </div>
+    <div class="border-2 flex-1 border-red-500">
+      <header>
+        <InputSearch />
+
+        <Dropdown>
+          <Avatar />
+
+        </Dropdown>
+
+        <Notifications />
+      </header>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import HomeIcon from '../components/icons/HomeIcon.vue'
+import TrendingUpIcon from '../components/icons/TrendingUpIcon.vue'
+import MenuItem from './navs/MenuItem.vue'
+import InputSearch from '../components/inputs/InputSearch.vue'
+</script>
